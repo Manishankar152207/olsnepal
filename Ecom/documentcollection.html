@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vendor.css">
+
+
+</head>
+
+<style>
+    body {
+        position: relative;
+        overflow-x: hidden;
+        background: #f7f7fc;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    a:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+    body,
+    html {
+        height: 100%;
+    }
+
+
+
+
+
+    /*---------------------------------
+sidebar
+----------------------*/
+
+    #sidebar-wrapper {
+        z-index: 1000;
+        height: 100%;
+        width: 0px;
+        left: -50px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background: darkcyan;
+        transition: all 0.5s ease;
+    }
+
+    #sidebar-wrapper::-webkit-scrollbar {
+        width: 8px;
+        background: #222e3c;
+    }
+
+    #sidebar-wrapper::-webkit-scrollbar-thumb {
+        background-color: #989898;
+        border-radius: 10px;
+    }
+
+
+    .sidebar-brand {
+        font-weight: 600;
+        font-size: 1.15rem;
+        padding: 1.15rem 1.5rem;
+        display: block;
+        color: #f8f9fa;
+    }
+
+    .sidebar-header {
+        text-transform: capitalize;
+        padding: 1.5rem 1.5rem .375rem !important;
+        font-size: 14px;
+        color: #ced4da;
+    }
+
+    .navbar-nav>li>a {
+        color: black !important;
+        text-transform: capitalize;
+        font-size: 18px;
+        padding: 10px 10px 10px 20px !important;
+        display: block;
+        font-weight: 500;
+        position: relative;
+        z-index: 2;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: .2px;
+    }
+
+
+
+
+    .navbar-nav>li>a.active {
+        color: #e9ecef !important;
+        background: linear-gradient(90deg, rgba(59, 125, 221, .1), rgba(59, 125, 221, .0875) 50%, transparent);
+        border-left: 4px solid #3b7ddd;
+    }
+
+
+
+
+
+
+
+    #wrapper.toggled {
+        padding-left: 270px;
+    }
+
+
+
+    .toggled#sidebar-wrapper {
+        width: 270px !important;
+        height: 100%;
+        left: 0px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        transition: all 0.5s ease;
+    }
+
+    .navbar-nav li {
+        display: block !important;
+        margin: 2px 0px;
+    }
+
+
+    .nav-item .nav-link {
+        display: block;
+        color: white !important;
+        text-transform: capitalize;
+        text-decoration: none;
+        padding: 6px 10px;
+        transition: 0.4s ease;
+    }
+
+    .navbar-nav>li>a i:before {
+        margin: 0px 5px 0px 0px;
+        font-size: 14px;
+    }
+
+
+    /*---------------------------------
+sidebar
+----------------------*/
+
+
+
+
+
+
+    /*---------------------------------
+  main-content
+----------------------*/
+
+    #page-content-wrapper {
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: absolute;
+        margin-right: -270px;
+
+        transition: all 0.5s ease;
+    }
+
+    .toggled#page-content-wrapper {
+        margin-left: 270px;
+        transition: all 0.5s ease;
+    }
+
+    @media only screen and (min-width:992px) {
+        .toggled#page-content-wrapper {
+            width: calc(100% - 270px);
+        }
+    }
+
+    /*---------------------------------
+  main-content
+----------------------*/
+
+
+
+    /*---------------------------------
+cross-bar animation
+----------------------*/
+
+
+    .nav-icon1 {
+        z-index: 999;
+        position: relative;
+        display: block;
+        width: 23px;
+        margin: 0px 30px 0px 25px;
+        cursor: pointer;
+        height: 25px;
+    }
+
+
+    .nav-icon1 span {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 3px;
+        cursor: pointer;
+        background-color: #5d5d5d;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .30s ease-in-out;
+    }
+
+    .nav-icon1:hover span:nth-of-type(1) {
+        top: -3px
+    }
+
+    .nav-icon1:hover span:nth-of-type(3) {
+        top: 19px;
+    }
+
+    .nav-icon1 span:nth-of-type(1) {
+        top: 0;
+    }
+
+    .nav-icon1 span:nth-of-type(2) {
+        top: 8px;
+    }
+
+    .nav-icon1 span:nth-of-type(3) {
+        top: 16px;
+    }
+
+    .nav-icon1.open span:nth-of-type(1) {
+        top: 8px;
+        transform: rotate(135deg);
+    }
+
+    .nav-icon1.open span:nth-of-type(2) {
+        top: 8px;
+        opacity: 0;
+        left: -30px;
+    }
+
+    .nav-icon1.open span:nth-of-type(3) {
+        top: 8px;
+        transform: rotate(-135deg);
+    }
+
+
+    /*---------------------------------
+cross-bar animation
+----------------------*/
+
+
+
+    /*---------------------------------
+header navbar design
+----------------------*/
+    .my-navbar {
+        padding: 0px;
+        background-color: white;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .16);
+    }
+
+    .text-gray-600 {
+        color: #858796 !important;
+    }
+
+    .nav-link .img-profile {
+        height: 40px;
+        width: 40px;
+    }
+
+    .navbar-nav>li>a>i {
+        font-size: 18px;
+        color: #b3b3b3;
+        margin: 8px 0px 0px 0px;
+        padding: 0px;
+    }
+
+    .badge-counter {
+        position: absolute;
+        transform: scale(.7);
+        transform-origin: top right;
+        right: 6px;
+        margin-top: 4px;
+    }
+
+
+    .dropdown,
+    .dropleft,
+    .dropright,
+    .dropup {
+        position: relative;
+    }
+
+    .nav-flag,
+    .nav-icon {
+        padding: .1rem .8rem;
+        display: block;
+        font-size: 1.5rem;
+        color: #6c757d;
+        transition: background .1s ease-in-out, color .1s ease-in-out;
+        line-height: 1.4;
+    }
+
+
+    .navbar-expand .navbar-nav .dropdown-menu {
+        position: absolute;
+    }
+
+    .navbar-nav .dropdown-menu {
+        box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, .05);
+    }
+
+    .navbar-nav .dropdown-menu {
+        position: static;
+        float: none;
+    }
+
+    .dropdown-menu-lg {
+        min-width: 20rem;
+    }
+
+
+    .position-relative {
+        position: relative !important;
+    }
+
+    .nav-item .indicator {
+        background: #3b7ddd;
+        box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, .05);
+        border-radius: 50%;
+        display: block;
+        height: 18px;
+        width: 18px;
+        padding: 1px;
+        position: absolute;
+        top: 0;
+        right: -8px;
+        text-align: center;
+        transition: top .1s ease-out;
+        font-size: .675rem;
+        color: #fff;
+    }
+
+    /*---------------------------------
+ header navbar design
+
+
+
+    /*---------------------------------
+ footer
+----------------------*/
+
+    .footer {
+        width: 100%;
+        background-color: #263238;
+        min-height: 100px;
+    }
+
+    footer.footer {
+        padding: 1rem .875rem;
+        direction: ltr;
+        background: #fff;
+    }
+
+    footer.footer ul {
+        margin: 0px;
+        list-style: none;
+    }
+
+    .footer ul li {
+        display: inline-block;
+        margin: 0px 7px;
+    }
+
+    .text-muted {
+        color: #6c757d !important;
+        font-size: 14px;
+    }
+
+
+    /*---------------------------------
+footer
+----------------------*/
+
+    /*---------------------------------
+Table
+----------------------*/
+
+    .table th,
+    .table td {
+        border-bottom: 1px solid #c1c1c1;
+        border-right: 1px solid #c1c1c1;
+    }
+
+    .table th {
+        border-top: medium none;
+        padding: 20px 10px;
+        text-align: center;
+        text-transform: uppercase;
+        vertical-align: middle;
+        white-space: nowrap;
+        font-family: 'Poppins', sans-serif;
+        color: #000000;
+        font-weight: 600;
+        font-size: 16px;
+    }
+</style>
+
+
+<body>
+
+
+    <div id="wrapper">
+        <div class="overlay"></div>
+
+        <!-- Sidebar -->
+        <nav class="fixed-top align-top" id="sidebar-wrapper" role="navigation">
+            <div class="simplebar-content" style="padding: 0px;">
+                <a class="sidebar-brand" href="index.html">
+                    <span class="align-middle">Manishankar</span>
+                </a>
+
+                <ul class="navbar-nav align-self-stretch">
+                    <li class="">
+                        <a class="nav-link text-left active" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="flaticon-bar-chart-1"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link text-left " role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fab fa-product-hunt"></i> Add Product
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link text-left" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-tasks"></i> Manage Product
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link text-left " role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fab fa-product-hunt"></i> Run ADS
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link text-left" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-tasks"></i> Manage ADS
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link text-left" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-business-time"></i> Buy Business Package
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link text-left" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bell"></i> Notifications
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link text-left" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-sms"></i> Messages
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link text-left" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="far fa-user-circle"></i> Profile
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link text-left" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="far fa-user-circle"></i> Register for Part Time Work
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link text-left" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-sliders-h"></i> Setting
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link text-left" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-question-circle"></i> Help
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link text-left" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div id="content">
+                <div class="container-fluid p-0 px-lg-0 px-md-0">
+                    <div class="row">
+                        <!-- Topbar -->
+                        <nav class="navbar navbar-expand navbar-light my-navbar">
+                            <div class="col-1">
+                                <!-- Sidebar Toggle (Topbar) -->
+                                <div type="button" id="bar" class="nav-icon1 hamburger animated fadeInLeft is-closed "
+                                    data-toggle="offcanvas" style="margin-left: 40px;">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <!-- Topbar Search -->
+                                <div class="d-none d-sm-inline-block form-inline ">
+                                    <img src="images/logo.png" height="50px" alt="">
+                                </div>
+                            </div>
+
+                            <!-- Topbar Navbar -->
+                            <ul class="navbar-nav" style="float: right;margin-left: auto;">
+                                <!-- Nav Item - Messages -->
+                                <li class="nav-item my-2">
+                                    <a class="nav-link " href="#" role="button">
+                                        <span class="mt-3 text-gray-600 small">Messages</span>
+                                    </a>
+                                </li>
+                                <!-- Nav Item - User Information -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                        data-toggle="dropdown">
+                                        <img class="img-profile rounded-circle" src="images/login2.png">
+                                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Manishankar</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </nav>
+                        <!-- End of Topbar -->
+
+                        <!-- Begin Page Content -->
+                        <div class="container-fluid p-5 ">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h4>You are almost ready to start Selling!</h4>
+                                </div>
+                                <div class="col-lg-12">
+                                    <h5 class="text-secondary">Please Complete all the Steps below.</h5>
+                                </div>
+                                <div class="row p-2" style="margin-left: auto;margin-right: auto;">
+                                    <div class="col-lg-3 col-md-6 col-12 text-center mt-2">
+                                        <div class="card text-center">
+                                            <div class="icon"
+                                                style="height: 65px;width: 65px; border: 1px solid white;border-radius: 50%;margin-left: auto;margin-right: auto;">
+                                                <img src="images/login2.png" alt=""
+                                                    style="height: 90%;width: 80%;object-fit: contain;">
+                                            </div>
+                                            <div class="">
+                                                <span>Profile</span>
+                                            </div>
+                                            <div class="not-provided mt-2"
+                                                style="width: 135px; border: 1px solid gray;border-radius: 20px;margin: auto;background-color: lightgray;color: white;font-weight: 600;">
+                                                <span>Not Provided</span>
+                                            </div>
+                                            <div class="my-2">
+                                                <a href="" data-bs-toggle="modal" data-bs-target="#profile"
+                                                    style="color: rgb(75, 100, 214);text-decoration: none;">Upload
+                                                    Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-12 text-center mt-2">
+                                        <div class="card text-center">
+                                            <div class="icon"
+                                                style="height: 65px;width: 65px; border: 1px solid white;border-radius: 50%;margin-left: auto;margin-right: auto;">
+                                                <img src="images/id.png" alt=""
+                                                    style="height: 90%;width: 80%;object-fit: contain;">
+                                            </div>
+                                            <div class="">
+                                                <span>ID Verification</span>
+                                            </div>
+                                            <div class="not-provided mt-2"
+                                                style="width: 135px; border: 1px solid gray;border-radius: 20px;margin: auto;background-color: lightgray;color: white;font-weight: 600;">
+                                                <span>Not Provided</span>
+                                            </div>
+                                            <div class="my-2">
+                                                <a href="" data-bs-toggle="modal" data-bs-target="#id-verification"
+                                                    style="color: rgb(75, 100, 214);text-decoration: none;">Upload
+                                                    Now</a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-12 text-center mt-2">
+                                        <div class="card text-center">
+                                            <div class="icon"
+                                                style="height: 65px;width: 65px; border: 1px solid white;border-radius: 50%;margin-left: auto;margin-right: auto;">
+                                                <img src="images/bank.png" alt=""
+                                                    style="height: 90%;width: 80%;object-fit: contain;">
+                                            </div>
+                                            <div class="">
+                                                <span>Bank</span>
+                                            </div>
+                                            <div class="not-provided mt-2"
+                                                style="width: 135px; border: 1px solid gray;border-radius: 20px;margin: auto;background-color: lightgray;color: white;font-weight: 600;">
+                                                <span>Not Provided</span>
+                                            </div>
+                                            <div class="my-2">
+                                                <a href="" data-bs-toggle="modal" data-bs-target="#bank"
+                                                    style="color: rgb(75, 100, 214);text-decoration: none;">Upload
+                                                    Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center mt-5">
+                                        <button class="btn-outline-success"
+                                            style="border-radius: 20px;">Continue</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-5 p-2 text-center" style="background-color: white;">
+                                    <div>
+                                        <h5>Store Details</h5>
+                                    </div>
+                                    <div>
+                                        <h6 class="text-secondary">Your store details will be saved and can be updated
+                                            by you through Dashboard.</h6>
+                                    </div>
+                                </div>
+                                <!--footer starts from here-->
+                            </div>
+                            <!--Profile-->
+                            <div class="modal fade" id="profile" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Upload
+                                                Profile Picture</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="" method="GET"></form>
+                                            <div class="form-group mt-2">
+                                                <input type="file" class="form-control">
+                                            </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Upload</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--IDs Verification-->
+                            <div class="modal fade" id="id-verification" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Upload
+                                                IDs</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="" method="GET">
+                                                <div class="form-group">
+                                                    <label for="id">ID Verification*</label>
+                                                    <select class="form-control mt-2" name="" id="id" required>
+                                                        <option value="">Select any one</option>
+                                                        <option value="">Passport</option>
+                                                        <option value="">Citizenship ID</option>
+                                                        <option value="">Driving License</option>
+                                                    </select>
+                                                    <input type="file" class="form-control mt-2" id="id">
+                                                </div>
+                                                <hr>
+                                                <div class="form-group mt-2">
+                                                    <label for="pan">PAN Certificate*</label>
+                                                    <input type="file" class="form-control mt-2" id="pan">
+                                                </div>
+                                                <hr>
+                                                <div class="col-12 mt-1">
+                                                    <label>Social Profile Link</label>
+                                                </div>
+                                                <div class="form-group  mt-3">
+                                                    <label for="">facebook</label>
+                                                    <div class="input-group mt-2">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"><i
+                                                                    class="fab fa-facebook-f fa-2x"></i></span>
+                                                        </div>
+                                                        <input type="text" class="form-control" value="" >
+                                                    </div>
+                                                </div>
+                                                <div class="form-group  mt-3">
+                                                    <label for="">Youtube</label>
+                                                    <div class="input-group mt-2">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"><i
+                                                                    class="fab fa-youtube fa-2x"></i></span>
+                                                        </div>
+                                                        <input type="text" class="form-control" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group  mt-3">
+                                                    <label for="">Instagram*</label>
+                                                    <div class="input-group mt-2">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"><i
+                                                                    class="fab fa-instagram fa-2x"></i></span>
+                                                        </div>
+                                                        <input type="text" class="form-control" value="">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Upload</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Bank Modal-->
+                            <div class="modal fade" id="bank" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Payment Method</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="">
+                                                <div class="form-group">
+                                                    <label for="">Bank Transfer*</label>
+                                                    <div class="col-12 d-md-flex">
+                                                        <div class="col-md-6 col-12">
+                                                            <select class="form-control mt-2" name="" id=""
+                                                                style="height: 40px;" required>
+                                                                <option value="">Select Bank</option>
+                                                                <option value="">Prabhu Bank</option>
+                                                                <option value="">NIC ASIA</option>
+                                                                <option value="">Citizen</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <input type="text" class="form-control mt-2"
+                                                                placeholder="Branch">
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-12 d-md-flex">
+                                                        <div class="col-md-6 col-12">
+                                                            <input type="text" class="form-control mt-2"
+                                                                placeholder="Your bank account number">
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <input type="text" class="form-control mt-2"
+                                                                placeholder="Your bank account Name">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="form-group  mt-3">
+                                                    <label for="">Esewa ID</label>
+                                                    <input type="text" class="form-control mt-2">
+                                                </div>
+                                                <hr>
+                                                <div class="form-group  mt-3">
+                                                    <label for="">Khalti ID</label>
+                                                    <input type="text" class="form-control mt-2">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Upload</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.container-fluid -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+        </script>
+
+    <script>
+
+        $('#bar').click(function () {
+            $(this).toggleClass('open');
+            $('#page-content-wrapper ,#sidebar-wrapper').toggleClass('toggled');
+
+        });
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

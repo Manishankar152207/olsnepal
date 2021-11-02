@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <title>OLSNepal</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/seller.css">
+</head>
+
+<body>
+    <section class="container-fluid d-none d-sm-block top-menu">
+        <div class="row">
+            <div class="d-flex">
+                <a href="" style="float: right;margin-left: auto;">OlsNepal Services</a>
+                <a href="" style="float: right;">Sell On OlsNepal</a>
+                <a href="" style="float: right;">Track My Order</a>
+                <a href="" style="float: right;">Login</a>
+                <a href="" style="float: right;">Sign Up</a>
+            </div>
+        </div>
+    </section>
+    <header class="sticky-top bg-light py-2" id="navbar">
+        <div class="container">
+            <div class="row" style="display: flex;">
+                <div class="col-4 col-md-2 d-none d-lg-block my-lg-auto">
+                    <a href="" class="navbar-brand"><img width=95px src="images/logo.jpeg"
+                            style="margin-top: -17px;"></a>
+                </div>
+                <div class="col-12 d-block d-lg-none mobile-navsection">
+                    <div class="row d-flex">
+                        <div class="container-fluid">
+                            <a class="navbar-brand"><img width=75px src="images/logo.png"></a>
+                            <span class="menu-toggle mt-3" style="float: right;margin-left: auto;margin-right: 15px;"><i
+                                    class="fas fa-bars"></i></span>
+                            <a href="#">
+                                <span class="mobile-icons mt-3">
+                                    <i class="fas fa-shopping-bag text-secondary "></i>
+                                    <small class="mobile-count d-flex">2</small>
+                                </span>
+                            </a>
+                            <a href="#"><span class="mobile-icons mt-3"><i class="fab fa-gratipay text-danger "></i>
+                                    <small class="mobile-count d-flex bg-warning">1</small>
+                                </span></a>
+                            <a href="#"><span class="mobile-icons mt-3"
+                                    style="color: black;font-weight: 600;">Login</span></a>
+                        </div>
+                        <nav class="mobile-nav">
+                            <div class="mobile-nav-profile d-flex my-3">
+                                <i class="fas fa-user-circle fa-2x text-light"></i>
+                                <h4 class="mt-1 mx-2">Manish</h4>
+                            </div>
+                            <div style="height: 90vh;overflow-y: auto;">
+                                <ul>
+                                    <li>
+                                        <a href="">Login</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Sign Up</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Sell on OLSNepal</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Get Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="">My Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="">My Order</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Wishlist</a>
+                                    </li>
+                                    <li>
+                                        <a href="">My Cart</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Track My Order</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Notification</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 my-2">
+                    <form class="d-flex">
+                        <input class="form-control border-left-0" type="search" placeholder="Find your product here..."
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="col-2 d-none d-lg-block mt-2 p-1 navsection">
+                    <ul>
+                        <li class="mx-2 icons">
+                            <a href="">
+                                <i class="fab fa-gratipay text-danger fa-2x"></i>
+                                <small class="count d-flex bg-warning">1</small>
+                            </a>
+                        </li>
+                        <li class="mx-2 icons">
+                            <a href="#">
+                                <i class="fas fa-shopping-bag text-secondary fa-2x"></i>
+                                <small class="count d-flex">2</small>
+                            </a>
+                        </li>
+                        <!-- <li class="mx-2"><a href="#"><i class="fas fa-user-circle text-success fa-2x"></i></a></li> -->
+                    </ul>
+                </div>
+                <div class="col-2 d-none d-lg-block mt-1 p-1 navsection">
+                    <div class="menu1">
+                        <span>Manish&nbsp;<li class="fas fa-chevron-down rotate" style="margin-top: 13px;"></li></span>
+                        <div id="list" class="hide">
+                            <div class="options">
+                                <p><i class="fas fa-user-circle text-primary"></i>&nbsp;My Profile</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="fab fa-product-hunt text-warning"></i> My Order</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="fas fa-handshake"></i>&nbsp;Sell on OLSNepal</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="far fa-hand-pointer text-info"></i>&nbsp;Get Services</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="far fa-heart text-danger"></i>&nbsp;Wishlists</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="fas fa-bell text-success"></i>&nbsp;Notification</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="fas fa-sign-out-alt text-dark"></i>&nbsp;Logout</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="categorie d-none d-md-block">
+        <div class="container">
+            <div class="row pt-2">
+                <div>
+                    <p>
+                        <a class="" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            ALL CATEGORIES <i class="fas fa-arrow-down"></i>
+                        </a>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <span>Services</span><br>
+                                    <a href="">Electronics & Computer</a><br>
+                                    <a href="">Education & Classes</a><br>
+                                    <a href="">Drivers & Taxi</a><br>
+                                    <a href="">Health & Beauty</a><br>
+                                    <a href="">Other Services</a><br>
+                                </div>
+                                <div class="col-3">
+                                    <span>Mobiles</span><br>
+                                    <a href="">Mobile Phones</a><br>
+                                    <a href="">Accessories</a><br>
+                                    <a href="">Tablets</a><br>
+                                </div>
+                                <div class="col-3">
+                                    <span>Properties(For Rent and sale)</span><br>
+                                    <a href="">Houses & Apartments</a><br>
+                                    <a href="">Houses & Apartments</a><br>
+                                    <a href="">Lands & Plots</a><br>
+                                    <a href="">Shops & Offices</a><br>
+                                    <a href="">Shops & Offices</a><br>
+                                    <a href="">PG & Guest Houses</a><br>
+                                </div>
+                                <div class="col-3">
+                                    <span>Fashion</span><br>
+                                    <a href="">Men</a><br>
+                                    <a href="">Women</a><br>
+                                    <a href="">Kids</a><br>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-3">
+                                    <span>Bikes</span><br>
+                                    <a href="">Motorcycles</a><br>
+                                    <a href="">Scooters</a><br>
+                                    <a href="">Spare Parts</a><br>
+                                    <a href="">Bicycles</a><br>
+                                </div>
+                                <div class="col-3">
+                                    <span>Electronics & Appliances</span><br>
+                                    <a href="">TVs, Video - Audio</a><br>
+                                    <a href="">Kitchen & Other Appliances</a><br>
+                                    <a href="">Computers & Laptops</a><br>
+                                    <a href="">Cameras & Lenses</a><br>
+                                    <a href="">Games & Entertainment
+                                    </a><br>
+                                    <a href="">Fridges</a><br>
+                                    <a href="">Computer Accessories</a><br>
+                                    <a href="">Hard Disks, Printers & Monitors</a><br>
+                                    <a href="">ACs</a><br>
+                                    <a href="">Washing Machines</a><br>
+                                </div>
+                                <div class="col-3">
+                                    <span>Furniture</span><br>
+                                    <a href="">Sofa & Dining</a><br>
+                                    <a href="">Beds & Wardrobes</a><br>
+                                    <a href="">Home Decor & Garden</a><br>
+                                    <a href="">Kids Furniture</a><br>
+                                    <a href="">Other Household Items</a><br>
+                                </div>
+                                <div class="col-3">
+                                    <span>Books, Sports & Hobbies</span><br>
+                                    <a href="">Books</a><br>
+                                    <a href="">Gym & Fitness</a><br>
+                                    <a href="">Musical Instruments</a><br>
+                                    <a href="">Sports Equipment</a><br>
+                                    <a href="">Other Hobbies</a><br>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-3">
+                                    <span>Cars</span><br>
+                                    <a href="">Cars</a>
+                                </div>
+                                <div class="col-3">
+                                    <span>Pets</span><br>
+                                    <a href="">Fishes & Aquarium</a><br>
+                                    <a href="">Pet Food & Accessories</a><br>
+                                    <a href="">Dogs</a><br>
+                                    <a href="">Other Pets</a><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container my-2" style="font-family: 'Poppins';background-color: #f1f1f1;" id="sellerprofile">
+        <div class="col-12">
+            <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="banner my-1">
+                                <div class="row my-3">
+                                    <img src="images/banner2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="row">
+                            <div class="banner my-1">
+                                <div class="row my-3">
+                                    <img src="images/banner1.JPG" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="row">
+                            <div class="banner my-1">
+                                <div class="row my-3">
+                                    <img src="images/servicebanner.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item ">
+                        <div class="row">
+                            <div class="banner my-1">
+                                <div class="row my-3">
+                                    <img src="images/covid.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls1"
+                    data-bs-slide="prev">
+                    <span style="background-color: black;" class="carousel-control-prev-icon "
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1"
+                    data-bs-slide="next">
+                    <span style="background-color: black;" class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-12 p-2" style="margin-top: -15px;">
+            <div class="row" style="background-color: #fff;">
+                <div class="col-3 text-center p-1">
+                    <img src="images/1.png" class="mt-3" alt=""
+                        style="width: 65%;height: 65%;object-fit: contain;margin-left: auto;margin-right: auto;">
+                </div>
+                <div class="col-md-6 col-9 mt-3">
+                    <h4 style=" word-break: break-word;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1; /* number of lines to show */
+                    -webkit-box-orient: vertical;
+                    font-family:Georgia, 'Times New Roman', Times, serif;">Jaiswal cycle store</h4>
+                    <span><i class="far fa-envelope"></i> help.olsnepal@gmail.com</span><br>
+                    <small class="text-muted">101 followers</span>&nbsp;|&nbsp;<span><i
+                                class="fas fa-star text-warning"></i>&nbsp;No Rating found yet!</small><br>
+                    <a href=""><i class="fab fa-facebook-square mx-1"></i></a>
+                    <a href=""><i class="fab fa-instagram mx-1"></i></a>
+                    <a href=""><i class="fab fa-youtube mx-1"></i></a>
+                </div>
+                <div class="col-md-3 col-12 my-3">
+                    <button class="seller-follow my-1">Follow</button>
+                    <button data-bs-toggle="modal" data-bs-target="#rate-profile" class="seller-follow my-1">Rate
+                        me</button>
+                    <div class="modal fade" id="rate-profile" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Rate Profile</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="" method="GET"></form>
+                                    <div class="col-12" style="color: black;">
+                                        <span class="mt-2" style="font-weight: 400; font-size: 14px;">Rating</span>
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <input type="number" class="" placeholder="Ex:0 - 5" style="width: 30%;">&nbsp;
+                                        <label for="" class="mt-2"><i class="fas fa-star text-warning"></i></label>
+                                    </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 p-2" id="product-list">
+            <div class="row" style="background-color: #fff;">
+                <div class="col-12 d-flex" style="color: black;">
+                    <h6 class="my-3" style="font-weight:400;font-size: small;">Product showing(40 out of 250)</h6>
+                    <span data-bs-toggle="modal" data-bs-target="#search" class="my-3"
+                        style="float: right;margin-left: auto;margin-right: 10px;cursor: pointer;"><i
+                            class="fas fa-search"></i></span>
+                    <div class="modal fade" id="search" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Search</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="" method="GET">
+                                        <div class="col-12 form-group">
+                                            <input type="text" class="form-control"
+                                                placeholder="Search your item here..">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 pl-2 sortby" style="margin-top: -8px;">
+                    <span class="d-flex mt-1" style="font-size: small;">Sort By:&nbsp;
+                        <form action="" style="margin-top: -5px;" class="d-flex">
+                            <select class="form-control" name="sort" id="sort" style="font-size: small; height: 30px;">
+                                <option value="" selected>Select</option>
+                                <option value="date">Newest First</option>
+                                <option value="lh">Price: Low to High</option>
+                                <option value="hl">Price: High to Low</option>
+                            </select>
+                            <button type="button" class="btn btn-primary"
+                                style="height: 30px;font-size: 10px;margin-left: 2px;">Apply</button>
+                        </form>
+                    </span>
+                </div>
+                <div class="col-12 p-3 text-center" id="justforyou">
+                    <div class="row d-flex" style="border-radius: 10px;">
+                        <div class="col-6 col-md-3 col-xl-3 my-3">
+                            <div class="card text-center">
+                                <div class="col-12 imgbx">
+                                    <img src="images/lap1.jpg" alt="">
+                                    <div class="overlay">
+                                        <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                    class="fas fa-eye"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to cart"><i class="fas fa-cart-plus"></i></button></a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-2 content text-center">
+                                    <div class="product-name">
+                                        <a href="">T-shirt with all sizes and pants of all size</a>
+                                    </div>
+                                    <div class="price">
+                                        <span>Rs.750&nbsp;
+                                            <br><small class="mrp"
+                                                style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                                class="mrp">-10%</small>
+                                        </span>
+                                    </div>
+                                    <!-- <div class="star">
+                                        (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                    (<span>17</span>)
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-xl-3 my-3">
+                            <div class="card text-center">
+                                <div class="col-12 imgbx">
+                                    <img src="images/raki.jpg" alt="">
+                                    <div class="overlay">
+                                        <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                    class="fas fa-eye"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to cart"><i class="fas fa-cart-plus"></i></button></a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-2 content text-center">
+                                    <div class="product-name">
+                                        <a href="">T-shirt with all sizes and pants of all size</a>
+                                    </div>
+                                    <div class="price">
+                                        <span>Rs.750&nbsp;
+                                            <br><small class="mrp"
+                                                style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                                class="mrp">-10%</small>
+                                        </span>
+                                    </div>
+                                    <!-- <div class="star">
+                                        (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                    (<span>17</span>)
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-xl-3 my-3">
+                            <div class="card text-center">
+                                <div class="col-12 imgbx">
+                                    <img src="images/gear.jpg" alt="">
+                                    <div class="overlay">
+                                        <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                    class="fas fa-eye"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to cart"><i class="fas fa-cart-plus"></i></button></a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-2 content text-center">
+                                    <div class="product-name">
+                                        <a href="">T-shirt with all sizes and pants of all size</a>
+                                    </div>
+                                    <div class="price">
+                                        <span>Rs.750&nbsp;
+                                            <br><small class="mrp"
+                                                style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                                class="mrp">-10%</small>
+                                        </span>
+                                    </div>
+                                    <!-- <div class="star">
+                                        (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                    (<span>17</span>)
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-xl-3 my-3">
+                            <div class="card text-center">
+                                <div class="col-12 imgbx">
+                                    <img src="images/product_10.png" alt="">
+                                    <div class="overlay">
+                                        <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                    class="fas fa-eye"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to cart"><i class="fas fa-cart-plus"></i></button></a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-2 content text-center">
+                                    <div class="product-name">
+                                        <a href="">T-shirt with all sizes and pants of all size</a>
+                                    </div>
+                                    <div class="price">
+                                        <span>Rs.750&nbsp;
+                                            <br><small class="mrp"
+                                                style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                                class="mrp">-10%</small>
+                                        </span>
+                                    </div>
+                                    <!-- <div class="star">
+                                        (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                    (<span>17</span>)
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-xl-3 my-3">
+                            <div class="card text-center">
+                                <div class="col-12 imgbx">
+                                    <img src="images/product_9.png" alt="">
+                                    <div class="overlay">
+                                        <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                    class="fas fa-eye"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to cart"><i class="fas fa-cart-plus"></i></button></a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-2 content text-center">
+                                    <div class="product-name">
+                                        <a href="">T-shirt with all sizes and pants of all size</a>
+                                    </div>
+                                    <div class="price">
+                                        <span>Rs.750&nbsp;
+                                            <br><small class="mrp"
+                                                style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                                class="mrp">-10%</small>
+                                        </span>
+                                    </div>
+                                    <!-- <div class="star">
+                                        (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                    (<span>17</span>)
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-xl-3 my-3">
+                            <div class="card text-center">
+                                <div class="col-12 imgbx">
+                                    <img src="images/product_8.png" alt="">
+                                    <div class="overlay">
+                                        <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                    class="fas fa-eye"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to cart"><i class="fas fa-cart-plus"></i></button></a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-2 content text-center">
+                                    <div class="product-name">
+                                        <a href="">T-shirt with all sizes and pants of all size</a>
+                                    </div>
+                                    <div class="price">
+                                        <span>Rs.750&nbsp;
+                                            <br><small class="mrp"
+                                                style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                                class="mrp">-10%</small>
+                                        </span>
+                                    </div>
+                                    <!-- <div class="star">
+                                        (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                    (<span>17</span>)
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-xl-3 my-3">
+                            <div class="card text-center">
+                                <div class="col-12 imgbx">
+                                    <img src="images/lap1.jpg" alt="">
+                                    <div class="overlay">
+                                        <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                    class="fas fa-eye"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to cart"><i class="fas fa-cart-plus"></i></button></a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-2 content text-center">
+                                    <div class="product-name">
+                                        <a href="">T-shirt with all sizes and pants of all size</a>
+                                    </div>
+                                    <div class="price">
+                                        <span>Rs.750&nbsp;
+                                            <br><small class="mrp"
+                                                style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                                class="mrp">-10%</small>
+                                        </span>
+                                    </div>
+                                    <!-- <div class="star">
+                                        (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                    (<span>17</span>)
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-xl-3 my-3">
+                            <div class="card text-center">
+                                <div class="col-12 imgbx">
+                                    <img src="images/lap2.jpg" alt="">
+                                    <div class="overlay">
+                                        <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                    class="fas fa-eye"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to cart"><i class="fas fa-cart-plus"></i></button></a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-2 content text-center">
+                                    <div class="product-name">
+                                        <a href="">T-shirt with all sizes and pants of all size</a>
+                                    </div>
+                                    <div class="price">
+                                        <span>Rs.750&nbsp;
+                                            <br><small class="mrp"
+                                                style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                                class="mrp">-10%</small>
+                                        </span>
+                                    </div>
+                                    <!-- <div class="star">
+                                        (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                    (<span>17</span>)
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-xl-3 my-3">
+                            <div class="card text-center">
+                                <div class="col-12 imgbx">
+                                    <img src="images/gear.jpg" alt="">
+                                    <div class="overlay">
+                                        <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                    class="fas fa-eye"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to cart"><i class="fas fa-cart-plus"></i></button></a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-2 content text-center">
+                                    <div class="product-name">
+                                        <a href="">T-shirt with all sizes and pants of all size</a>
+                                    </div>
+                                    <div class="price">
+                                        <span>Rs.750&nbsp;
+                                            <br><small class="mrp"
+                                                style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                                class="mrp">-10%</small>
+                                        </span>
+                                    </div>
+                                    <!-- <div class="star">
+                                        (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                    (<span>17</span>)
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-xl-3 my-3">
+                            <div class="card text-center">
+                                <div class="col-12 imgbx">
+                                    <img src="images/product_10.png" alt="">
+                                    <div class="overlay">
+                                        <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                    class="fas fa-eye"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to cart"><i class="fas fa-cart-plus"></i></button></a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-2 content text-center">
+                                    <div class="product-name">
+                                        <a href="">T-shirt with all sizes and pants of all size</a>
+                                    </div>
+                                    <div class="price">
+                                        <span>Rs.750&nbsp;
+                                            <br><small class="mrp"
+                                                style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                                class="mrp">-10%</small>
+                                        </span>
+                                    </div>
+                                    <!-- <div class="star">
+                                        (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                    (<span>17</span>)
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-xl-3 my-3">
+                            <div class="card text-center">
+                                <div class="col-12 imgbx">
+                                    <img src="images/product_9.png" alt="">
+                                    <div class="overlay">
+                                        <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                    class="fas fa-eye"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to cart"><i class="fas fa-cart-plus"></i></button></a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-2 content text-center">
+                                    <div class="product-name">
+                                        <a href="">T-shirt with all sizes and pants of all size</a>
+                                    </div>
+                                    <div class="price">
+                                        <span>Rs.750&nbsp;
+                                            <br><small class="mrp"
+                                                style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                                class="mrp">-10%</small>
+                                        </span>
+                                    </div>
+                                    <!-- <div class="star">
+                                        (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                    (<span>17</span>)
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-xl-3 my-3">
+                            <div class="card text-center">
+                                <div class="col-12 imgbx">
+                                    <img src="images/2-1 (1).jpg" alt="">
+                                    <div class="overlay">
+                                        <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                    class="fas fa-eye"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                        <a href=""><button type="button" class="btn btn-secondary"
+                                                title="Add to cart"><i class="fas fa-cart-plus"></i></button></a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-2 content text-center">
+                                    <div class="product-name">
+                                        <a href="">T-shirt with all sizes and pants of all size</a>
+                                    </div>
+                                    <div class="price">
+                                        <span>Rs.750&nbsp;
+                                            <br><small class="mrp"
+                                                style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                                class="mrp">-10%</small>
+                                        </span>
+                                    </div>
+                                    <!-- <div class="star">
+                                        (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                    (<span>17</span>)
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <!--footer starts from here-->
+    <footer class="footer bg-light">
+        <div class="container bottom_border">
+            <div class="row">
+                <div class="col-md-4 col-12 col text-secondary">
+                    <h5 class="headin5_amrc col_white_amrc pt2"><img width=85px src="images/logo.jpeg"></h5>
+                    <!--headin5_amrc-->
+                    <p class="mb10 text-secondary">Buy,Sell,Keep Anything on Rent and Provide Paid Services to nearby
+                        Customer.</p>
+                    <p class="text-secondary"><i class="fa fa-location-arrow"></i>Narayanghat, Nepal </p>
+                    <p class="text-secondary"><i class="fa fa-phone"></i> +9779811170683 </p>
+                    <p class="text-secondary"><i class="fa fa fa-envelope"></i> help.olsnepal@gmail.com </p>
+                </div>
+                <div class="col-md-4 col-12 text-secondary">
+                    <h5 class="headin5_amrc col_white_amrc pt2 text-info font-weight-bolder">POPULAR LOCATIONS</h5>
+                    <!--headin5_amrc-->
+                    <ul class="footer_ul_amrc">
+                        <li><a href="">Narayanghat</a></li>
+                    </ul>
+                    <!--footer_ul_amrc ends here-->
+                </div>
+                <div class="col-md-4 col-12 text-secondary">
+                    <h5 class="headin5_amrc col_white_amrc pt2 text-info font-weight-bolder">OLSNepal</h5>
+                    <!--headin5_amrc-->
+                    <ul class="footer_ul_amrc">
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="about.html#team">OLSNepal People</a></li>
+                        <li><a href="">Help</a></li>
+                        <li><a href="">Legal & Privacy information</a></li>
+                        <li><a href="disallow item.html">Items/Services not allowed on OLSNepal</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <ul class="foote_bottom_ul_amrc">
+                <li><a href="http://webenlance.com">Blog</a></li>
+                <li><a href="http://webenlance.com">About</a></li>
+                <li><a href="http://webenlance.com">Contact</a></li>
+                <li><a href="http://webenlance.com">Events</a></li>
+            </ul>
+            <!--foote_bottom_ul_amrc ends here-->
+            <p class="text-center">Copyright @2017 | Designed With by <a href="#">Manishankar</a></p>
+
+            <ul class="social_footer_ul">
+                <li><a href="http://webenlance.com"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="http://webenlance.com"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="http://webenlance.com"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="http://webenlance.com"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <!--social_footer_ul ends here-->
+        </div>
+
+
+    </footer>
+    <script>
+        $(document).ready(function () {
+            $('.menu-toggle').click(function () {
+                $('nav').toggleClass('active')
+            })
+
+        })
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

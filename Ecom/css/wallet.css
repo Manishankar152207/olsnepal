@@ -1,0 +1,26 @@
+
+/*Customer Earning*/
+.Earnings .earn-card{
+    border-right: 1px solid rgb(155, 154, 154);
+    background-color: white;
+}
+.Earnings .earning-history table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .Earnings .earning-history tr:nth-child(even) {background-color: #f2f2f2;}
+.Earnings .earning-history th, td {
+    text-align: left;
+    padding: 8px;
+  }
+@media screen and (max-width: 768px) {
+    .Earnings .earn-card,.earn-cardlast{
+        border-right: 1px solid rgb(155, 154, 154);
+    } 
+    
+}
+@media screen and (max-width: 767px) {
+    .Earnings .earn-card,.earn-cardlast{
+        border-bottom: 1px solid rgb(155, 154, 154);
+    } 
+}

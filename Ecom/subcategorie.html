@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <title>OLSNepal</title>
+    <!-- Owl Carousel File -->
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    .suggestion {
+        margin-top: 38px;
+        position: absolute;
+        box-shadow: 0 0 2px rgba(0, 0, 0, .1);
+        background: #fff;
+        border: 1px solid lightgray;
+        color: gray;
+        width: 39%;
+        height: 125px;
+        overflow-x: auto;
+        border-radius: 5px;
+        display: none;
+    }
+
+    #navbar .suggestion .suggestion-list:hover {
+        cursor: pointer;
+        color: black;
+        background: rgb(243, 238, 230);
+    }
+
+    @media screen and (max-width: 1024px) {
+        #navbar .suggestion {
+            width: 40%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        #navbar .suggestion {
+            width: 85%;
+        }
+    }
+
+    @media screen and (max-width: 540px) {
+        #navbar .suggestion {
+            width: 82%;
+        }
+    }
+</style>
+
+<body>
+    <section class="container-fluid d-none d-sm-block top-menu">
+        <div class="row">
+            <div class="d-flex">
+                <a href="" style="float: right;margin-left: auto;">OlsNepal Services</a>
+                <a href="" style="float: right;">Sell On OlsNepal</a>
+                <a href="" style="float: right;">Track My Order</a>
+                <a href="" style="float: right;">Login</a>
+                <a href="" style="float: right;">Sign Up</a>
+            </div>
+        </div>
+    </section>
+    <header class="sticky-top bg-light py-2" id="navbar">
+        <div class="container">
+            <div class="row" style="display: flex;">
+                <div class="col-4 col-md-2 d-none d-lg-block my-lg-auto">
+                    <a href="" class="navbar-brand"><img width=95px src="images/logo.jpeg"></a>
+                </div>
+                <div class="col-12 d-block d-lg-none mobile-navsection">
+                    <div class="row d-flex">
+                        <div class="container-fluid">
+                            <a class="navbar-brand"><img width=75px src="images/logo.png"></a>
+                            <span class="menu-toggle mt-3" style="float: right;margin-left: auto;margin-right: 15px;"><i
+                                    class="fas fa-bars"></i></span>
+                            <a href="#">
+                                <span class="mobile-icons mt-3">
+                                    <i class="fas fa-shopping-bag text-secondary "></i>
+                                    <small class="mobile-count d-flex">2</small>
+                                </span>
+                            </a>
+                            <a href="#"><span class="mobile-icons mt-3"><i class="fab fa-gratipay text-danger "></i>
+                                    <small class="mobile-count d-flex bg-warning">1</small>
+                                </span></a>
+                            <a href="#"><span class="mobile-icons mt-3"
+                                    style="color: black;font-weight: 600;">Login</span></a>
+                        </div>
+                        <nav class="mobile-nav">
+                            <div class="mobile-nav-profile d-flex my-3">
+                                <i class="fas fa-user-circle fa-2x text-light"></i>
+                                <h4 class="mt-1 mx-2">Manishankar</h4>
+                            </div>
+                            <div style="height: 90vh;overflow-y: auto;">
+                                <ul>
+                                    <li>
+                                        <a href="">Login</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Sign Up</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Sell on OLSNepal</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Get Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="">My Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="">My Order</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Wishlist</a>
+                                    </li>
+                                    <li>
+                                        <a href="">My Cart</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Track My Order</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Notification</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 my-2">
+                    <form class="d-flex">
+                        <input class="form-control border-left-0" type="search" placeholder="Find your product here..."
+                            aria-label="Search">
+                        <div class="suggestion">
+                            <div>
+                                <div class="suggestion-list border-bottom px-2">
+                                    <span>My name is khan and.....</span>
+                                </div>
+                                <div class="suggestion-list border-bottom px-2">
+                                    <span>My name is khan and.....</span>
+                                </div>
+                                <div class="suggestion-list border-bottom px-2">
+                                    <span>My name is khan and.....</span>
+                                </div>
+                                <div class="suggestion-list border-bottom px-2">
+                                    <span>My name is khan and.....</span>
+                                </div>
+                                <div class="suggestion-list border-bottom px-2">
+                                    <span>My name is khan and.....</span>
+                                </div>
+                                <div class="suggestion-list border-bottom px-2">
+                                    <span>My name is khan and.....</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+
+                </div>
+                <div class="col-2 d-none d-lg-block mt-2 p-1 navsection">
+                    <ul>
+                        <li class="mx-2 icons">
+                            <a href="">
+                                <i class="fab fa-gratipay text-danger fa-2x"></i>
+                                <small class="count d-flex bg-warning">1</small>
+                            </a>
+                        </li>
+                        <li class="mx-2 icons">
+                            <a href="#">
+                                <i class="fas fa-shopping-bag text-secondary fa-2x"></i>
+                                <small class="count d-flex">2</small>
+                            </a>
+                        </li>
+                        <!-- <li class="mx-2"><a href="#"><i class="fas fa-user-circle text-success fa-2x"></i></a></li> -->
+                    </ul>
+                </div>
+                <div class="col-2 d-none d-lg-block mt-1 p-1 navsection">
+                    <div class="menu1">
+                        <span>Manish&nbsp;<li class="fas fa-chevron-down rotate" style="margin-top: 13px;"></li></span>
+                        <div id="list" class="hide">
+                            <div class="options">
+                                <p><i class="fas fa-user-circle text-primary"></i>&nbsp;My Profile</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="fab fa-product-hunt text-warning"></i> My Order</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="fas fa-handshake"></i>&nbsp;Sell on OLSNepal</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="far fa-hand-pointer text-info"></i>&nbsp;Get Services</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="far fa-heart text-danger"></i>&nbsp;Wishlists</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="fas fa-bell text-success"></i>&nbsp;Notification</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="fas fa-sign-out-alt text-dark"></i>&nbsp;Logout</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-top container-fluid categorie bg-light d-xl-block d-none" style="margin-top: -5px;z-index: -1;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="all-categorie">
+                            <span class="mb-1">All Category&nbsp;<li class="fas fa-chevron-down rotate" style="margin-top: 13px;"></li>
+                                </span>
+                                <!-- <ul>
+                                    <li>
+                                        <a href="">Menu 1<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="">Menu 2<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Sub Menu 1<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="">Sub Menu 2<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                                <ul>
+                                                    <li>
+                                                        <a href="">Deep Menu 1<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">Deep Menu 2<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="">Sub Deep Menu 1<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">Sub Deep Menu 2<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="">Sub Deep Menu 3<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">Deep Menu 3<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="">Sub Menu 3<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="">Sub Menu 4<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="">Menu 3<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="">Menu 4<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Sub Menu 1<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="">Sub Menu 2<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="">Sub Menu 3<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="">Sub Menu 4<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="">Menu 5<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                    </li>
+                                </ul> -->
+                            <div class="categorie-list">
+                                <div class="d-flex">
+                                    <div class="level-1">
+                                        <div class="options">
+                                            <a href="" class="cat-1">Mobiles<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-1">TV & Home Appliances<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-1">Mechanical<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-1">Mobiles<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-1">TV & Home Appliances<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-1">Mechanical<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-1">Mobiles<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-1">TV & Home Appliances <i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-1">Mechanical<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-1">Mobiles<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-1">TV & Home Appliances<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-1">Mechanical<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="level-2">
+                                        <div class="options">
+                                            <a href="" class="cat-2">Mobiles<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">TV & Home Appliances<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">Mechanical<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">Mobiles<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">TV & Home Appliances<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">Mechanical<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">Mobiles<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">TV & Home Appliances <i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">Mechanical<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">Mobiles<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">TV & Home Appliances<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">Mechanical<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="level-3">
+                                        <div class="options">
+                                            <a href="" class="cat-2">Mobiles<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">TV & Home Appliances<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">Mechanical<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">Mobiles<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">TV & Home Appliances<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">Mechanical<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">Mobiles<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">TV & Home Appliances <i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">Mechanical<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">Mobiles<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">TV & Home Appliances<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                        <div class="options">
+                                            <a href="" class="cat-2">Mechanical<i style="float: right;" class="fas fa-chevron-right mt-1"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </header>
+    <section class="container mt-xl-4 p-2" id="shopbycategory">
+        <div class="row d-flex">
+            <div class="product_slider_container">
+                <div class="owl-carousel owl-theme product_slider2">
+                    <!--slider 1-->
+                    <div class="owl-item product_slider_item">
+                        <div class="cat-card my-2">
+                            <a href="">
+                                <div class="imgbx">
+                                    <img src="images/electronics.jpg" alt="" class="">
+                                </div>
+                                <div class="content text-center">
+                                    <span>Electronics device</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--slider 2-->
+                    <div class="owl-item product_slider_item">
+                        <div class="cat-card my-2">
+                            <a href="">
+                                <div class="imgbx">
+                                    <img src="images/electronic acc.jpg" alt="" class="">
+                                </div>
+                                <div class="content text-center">
+                                    <span>Electronic Accessories</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--slider 3-->
+                    <div class="owl-item product_slider_item">
+                        <div class="cat-card my-2">
+                            <a href="">
+                                <div class="imgbx">
+                                    <img src="images/homeapp.png" alt="" class="">
+                                </div>
+                                <div class="content text-center">
+                                    <span>Tv and Home Appliances</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--slider 4-->
+                    <div class="owl-item product_slider_item">
+                        <div class="cat-card my-2">
+                            <a href="">
+                                <div class="imgbx">
+                                    <img src="images/health-beauty.jpg" alt="" class="">
+                                </div>
+                                <div class="content text-center">
+                                    <span>Health & Beauty
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--slider 5-->
+                    <div class="owl-item product_slider_item">
+                        <div class="cat-card my-2">
+                            <a href="">
+                                <div class="imgbx">
+                                    <img src="images/Baby-Toy.jpg" alt="" class="">
+                                </div>
+                                <div class="content text-center">
+                                    <span>Babies & Toys</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--slider 6-->
+                    <div class="owl-item product_slider_item">
+                        <div class="cat-card my-2">
+                            <a href="">
+                                <div class="imgbx">
+                                    <img src="images/Groceries & Pets.jpg" alt="" class="">
+                                </div>
+                                <div class="content text-center">
+                                    <span>Groceries & Pets</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--slider 7-->
+                    <div class="owl-item product_slider_item">
+                        <div class="cat-card my-2">
+                            <a href="">
+                                <div class="imgbx">
+                                    <img src="images/Home & Lifestyle.jpg" alt="" class="">
+                                </div>
+                                <div class="content text-center">
+                                    <span>Home & Lifestyle</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--slider 8-->
+                    <div class="owl-item product_slider_item">
+                        <div class="cat-card my-2">
+                            <a href="">
+                                <div class="imgbx">
+                                    <img src="images/deal_ofthe_week.png" alt="" class="">
+                                </div>
+                                <div class="content text-center">
+                                    <span>Men's Fashion</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--slider 9-->
+                    <div class="owl-item product_slider_item">
+                        <div class="cat-card my-2">
+                            <a href="">
+                                <div class="imgbx">
+                                    <img src="images/women's Fashion.jpg" alt="" class="">
+                                </div>
+                                <div class="content text-center">
+                                    <span>Women's Fashion</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--slider 10-->
+                    <div class="owl-item product_slider_item">
+                        <div class="cat-card my-2">
+                            <a href="">
+                                <div class="imgbx">
+                                    <img src="images/Watches & Accessories.jpg" alt="" class="">
+                                </div>
+                                <div class="content text-center">
+                                    <span>Watches & Accessories</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--slider 11-->
+                    <div class="owl-item product_slider_item">
+                        <div class="cat-card my-2">
+                            <a href="">
+                                <div class="imgbx">
+                                    <img src="images/Sports.png" alt="" class="">
+                                </div>
+                                <div class="content text-center">
+                                    <span>Sports</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--slider 12-->
+                    <div class="owl-item product_slider_item">
+                        <div class="cat-card my-2">
+                            <a href="">
+                                <div class="imgbx">
+                                    <img src="images/Automotive & Motorbike.jpg" alt="" class="">
+                                </div>
+                                <div class="content text-center">
+                                    <span>Automotive & Motorbike</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+    <section class="container p-2" id="shopbycategory1">
+        <div class="row my-2">
+            <div class="col-12 p-1">
+                <h4 class="mx-3">Mobiles</h4>
+            </div>
+            <div class="col-12 p-3">
+                <div class="row d-flex">
+                    <div class="cat-card my-2">
+                        <a href="">
+                            <div class="imgbx">
+                                <img src="images/loading.gif" alt="" class="">
+                            </div>
+                            <div class="content text-center">
+                                <span>Fashion</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cat-card my-2">
+                        <a href="">
+                            <div class="imgbx">
+                                <img src="images/loading.gif" alt="" class="">
+                            </div>
+                            <div class="content text-center">
+                                <span>Tv and Home Appliances</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cat-card my-2">
+                        <a href="">
+                            <div class="imgbx">
+                                <img src="images/loading.gif" alt="" class="">
+                            </div>
+                            <div class="content text-center">
+                                <span>Fashion</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cat-card my-2">
+                        <a href="">
+                            <div class="imgbx">
+                                <img src="images/loading.gif" alt="" class="">
+                            </div>
+                            <div class="content text-center">
+                                <span>Tv and Home Appliances</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cat-card my-2">
+                        <a href="">
+                            <div class="imgbx">
+                                <img src="images/loading.gif" alt="" class="">
+                            </div>
+                            <div class="content text-center">
+                                <span>Fashion</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cat-card my-2">
+                        <a href="">
+                            <div class="imgbx">
+                                <img src="images/loading.gif" alt="" class="">
+                            </div>
+                            <div class="content text-center">
+                                <span>Tv and Home Appliances</span>
+                            </div>
+                        </a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+    <section class="container  p-2" id="justforyou">
+        <div class="row">
+            <div class="col-12 p-1 d-flex">
+                <h4 class="mx-3">Computers</h4>
+                <a href="" style="float: right;margin-left: auto;"><button type="button" class="shopmore-btn">See
+                        more&nbsp;<i class="fas fa-arrow-right"></i></button></a>
+            </div>
+            <div class="col-12 p-3 text-center">
+                <div class="row d-flex" style="border-radius: 10px;">
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2 my-1">
+                        <div class="card text-center">
+                            <div class="col-12 imgbx mt-1">
+                                <img src="images/lap1.jpg" alt="">
+                                <div class="overlay">
+                                    <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                class="fas fa-eye"></i></button></a>
+                                    <a href=""><button type="button" class="btn btn-secondary"
+                                            title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                    <a href=""><button type="button" class="btn btn-secondary" title="Add to cart"><i
+                                                class="fas fa-cart-plus"></i></button></a>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-2 content text-center">
+                                <div class="product-name">
+                                    <a href="">T-shirt with all sizes</a>
+                                </div>
+                                <div class="price">
+                                    <span>Rs.750&nbsp;<br><small class="mrp"
+                                            style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                            class="mrp">-10%</small>
+                                    </span>
+                                </div>
+                                <!-- <div class="star">
+                                    (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                (<span>17</span>)
+                                </div> -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2 my-1">
+                        <div class="card text-center">
+                            <div class="col-12 imgbx mt-1">
+                                <img src="images/electronic.jfif" alt="">
+                                <div class="overlay">
+                                    <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                class="fas fa-eye"></i></button></a>
+                                    <a href=""><button type="button" class="btn btn-secondary"
+                                            title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                    <a href=""><button type="button" class="btn btn-secondary" title="Add to cart"><i
+                                                class="fas fa-cart-plus"></i></button></a>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-2 content text-center">
+                                <div class="product-name">
+                                    <a href="">T-shirt with all sizes</a>
+                                </div>
+                                <div class="price">
+                                    <span>Rs.750&nbsp;<br><small class="mrp"
+                                            style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                            class="mrp">-10%</small>
+                                    </span>
+                                </div>
+                                <!-- <div class="star">
+                                    (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                (<span>17</span>)
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2 my-1">
+                        <div class="card text-center">
+                            <div class="col-12 imgbx mt-1">
+                                <img src="images/lap2.jpg" alt="">
+                                <div class="overlay">
+                                    <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                class="fas fa-eye"></i></button></a>
+                                    <a href=""><button type="button" class="btn btn-secondary"
+                                            title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                    <a href=""><button type="button" class="btn btn-secondary" title="Add to cart"><i
+                                                class="fas fa-cart-plus"></i></button></a>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-2 content text-center">
+                                <div class="product-name">
+                                    <a href="">T-shirt with all sizes</a>
+                                </div>
+                                <div class="price">
+                                    <span>Rs.750&nbsp;<br><small class="mrp"
+                                            style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                            class="mrp">-10%</small>
+                                    </span>
+                                </div>
+                                <!-- <div class="star">
+                                    (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                (<span>17</span>)
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2 my-1">
+                        <div class="card text-center">
+                            <div class="col-12 imgbx mt-1">
+                                <img src="images/team1.png" alt="">
+                                <div class="overlay">
+                                    <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                class="fas fa-eye"></i></button></a>
+                                    <a href=""><button type="button" class="btn btn-secondary"
+                                            title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                    <a href=""><button type="button" class="btn btn-secondary" title="Add to cart"><i
+                                                class="fas fa-cart-plus"></i></button></a>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-2 content text-center">
+                                <div class="product-name">
+                                    <a href="">T-shirt with all sizes</a>
+                                </div>
+                                <div class="price">
+                                    <span>Rs.750&nbsp;<br><small class="mrp"
+                                            style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                            class="mrp">-10%</small>
+                                    </span>
+                                </div>
+                                <!-- <div class="star">
+                                    (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                (<span>17</span>)
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2 my-1">
+                        <div class="card text-center">
+                            <div class="col-12 imgbx mt-1">
+                                <img src="images/gear.jpg" alt="">
+                                <div class="overlay">
+                                    <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                class="fas fa-eye"></i></button></a>
+                                    <a href=""><button type="button" class="btn btn-secondary"
+                                            title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                    <a href=""><button type="button" class="btn btn-secondary" title="Add to cart"><i
+                                                class="fas fa-cart-plus"></i></button></a>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-2 content text-center">
+                                <div class="product-name">
+                                    <a href="">T-shirt with all sizes</a>
+                                </div>
+                                <div class="price">
+                                    <span>Rs.750&nbsp;<br><small class="mrp"
+                                            style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                            class="mrp">-10%</small>
+                                    </span>
+                                </div>
+                                <!-- <div class="star">
+                                    (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                (<span>17</span>)
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2 my-1">
+                        <div class="card text-center">
+                            <div class="col-12 imgbx mt-1">
+                                <img src="images/2-1.jpg" alt="">
+                                <div class="overlay">
+                                    <a href=""><button type="button" class="btn btn-secondary" title="Quick Shop"><i
+                                                class="fas fa-eye"></i></button></a>
+                                    <a href=""><button type="button" class="btn btn-secondary"
+                                            title="Add to Wishlist"><i class="fas fa-heart"></i></button></a>
+                                    <a href=""><button type="button" class="btn btn-secondary" title="Add to cart"><i
+                                                class="fas fa-cart-plus"></i></button></a>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-2 content text-center">
+                                <div class="product-name">
+                                    <a href="">T-shirt with all sizes and its assoc..</a>
+                                </div>
+                                <div class="price">
+                                    <span>Rs.750&nbsp;<br><small class="mrp"
+                                            style="text-decoration: line-through;">Rs.1250</small>&nbsp;<small
+                                            class="mrp">-10%</small>
+                                    </span>
+                                </div>
+                                <!-- <div class="star">
+                                    (<span>4.9</span>&nbsp;<i class="fas fa-star text-warning"></i>)
+                                (<span>17</span>)
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-outline-success text-info mt-5" style="height: 34px;font-size: 15px;">Load
+                    More</button>
+            </div>
+        </div>
+    </section>
+    <!--footer starts from here-->
+    <footer class="footer bg-light">
+        <div class="container bottom_border">
+            <div class="row">
+                <div class="col-md-4 col-12 col text-secondary">
+                    <h5 class="headin5_amrc col_white_amrc pt2"><img width=85px src="images/logo.jpeg"></h5>
+                    <!--headin5_amrc-->
+                    <p class="mb10 text-secondary">Buy,Sell,Keep Anything on Rent and Provide Paid Services to nearby
+                        Customer.</p>
+                    <p class="text-secondary"><i class="fa fa-location-arrow"></i>Narayanghat, Nepal </p>
+                    <p class="text-secondary"><i class="fa fa-phone"></i> +9779811170683 </p>
+                    <p class="text-secondary"><i class="fa fa fa-envelope"></i> help.olsnepal@gmail.com </p>
+                </div>
+                <div class="col-md-4 col-12 text-secondary">
+                    <h5 class="headin5_amrc col_white_amrc pt2 text-info font-weight-bolder">POPULAR LOCATIONS</h5>
+                    <!--headin5_amrc-->
+                    <ul class="footer_ul_amrc">
+                        <li><a href="">Narayanghat</a></li>
+                    </ul>
+                    <!--footer_ul_amrc ends here-->
+                </div>
+                <div class="col-md-4 col-12 text-secondary">
+                    <h5 class="headin5_amrc col_white_amrc pt2 text-info font-weight-bolder">OLSNepal</h5>
+                    <!--headin5_amrc-->
+                    <ul class="footer_ul_amrc">
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="about.html#team">OLSNepal People</a></li>
+                        <li><a href="">Help</a></li>
+                        <li><a href="">Legal & Privacy information</a></li>
+                        <li><a href="disallow item.html">Items/Services not allowed on OLSNepal</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <ul class="foote_bottom_ul_amrc">
+                <li><a href="http://webenlance.com">Blog</a></li>
+                <li><a href="http://webenlance.com">About</a></li>
+                <li><a href="http://webenlance.com">Contact</a></li>
+                <li><a href="http://webenlance.com">Events</a></li>
+            </ul>
+            <!--foote_bottom_ul_amrc ends here-->
+            <p class="text-center">Copyright @2017 | Designed With by <a href="#">Manishankar</a></p>
+
+            <ul class="social_footer_ul">
+                <li><a href="http://webenlance.com"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="http://webenlance.com"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="http://webenlance.com"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="http://webenlance.com"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <!--social_footer_ul ends here-->
+        </div>
+
+
+    </footer>
+    <script>
+        $(document).ready(function () {
+            $('.menu-toggle').click(function () {
+                $('nav').toggleClass('active')
+            })
+
+        })
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- jquery JS File -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Isotope JS File -->
+    <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+    <!-- Owl Carousel JS File -->
+    <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <!-- Javascript File -->
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

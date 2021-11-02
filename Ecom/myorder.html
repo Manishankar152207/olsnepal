@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <title>OLSNepal</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="container-fluid d-none d-sm-block top-menu">
+        <div class="row">
+            <div class="d-flex">
+                <a href="" style="float: right;margin-left: auto;">OlsNepal Services</a>
+                <a href="" style="float: right;">Sell On OlsNepal</a>
+                <a href="" style="float: right;">Track My Order</a>
+                <a href="" style="float: right;">Login</a>
+                <a href="" style="float: right;">Sign Up</a>
+            </div>
+        </div>
+    </section>
+    <header class="sticky-top bg-light py-2" id="navbar">
+        <div class="container">
+            <div class="row" style="display: flex;">
+                <div class="col-4 col-md-2 d-none d-lg-block my-lg-auto">
+                    <a href="" class="navbar-brand"><img width=95px src="images/logo.jpeg"></a>
+                </div>
+                <div class="col-12 d-block d-lg-none">
+                    <div class="row d-flex">
+                        <div class="container-fluid">
+                            <a class="navbar-brand"><img width=75px src="images/logo.png"></a>
+                            <span class="menu-toggle mt-2" style="float: right;margin-left: auto;margin-right: 15px;"><i
+                                    class="fas fa-bars"></i></span>
+                            <a href="#"><span class=" mt-2"
+                                    style="float: right;margin-left: auto;margin-right: 10px;"><i
+                                        class="fas fa-cart-plus text-warning"></i></span></a>
+                            <a href="#"><span class=" mt-2"
+                                    style="float: right;margin-left: auto;margin-right: 10px;color: black;font-weight: 600;">Login</span></a>
+                        </div>
+                        <nav class="mobile-nav">
+                            <div class="mobile-nav-profile d-flex my-3">
+                                <i class="fas fa-user-circle fa-2x text-light"></i>
+                                <h4 class="mt-1 mx-2">OLSNepal Customer</h4>
+                            </div>
+                            <div style="height: 90vh;overflow-y: auto;">
+                                <ul>
+                                    <li>
+                                        <a href="">Login</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Sign Up</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Sell on OLSNepal</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Get Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="">My Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="">My Order</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Wishlist</a>
+                                    </li>
+                                    <li>
+                                        <a href="">My Cart</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Track My Order</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Notification</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 my-2">
+                    <form class="d-flex">
+                        <input class="form-control border-left-0" type="search" placeholder="Find your product here..."
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="col-2 d-none d-lg-block navsection" style="padding-top: 6px;width: 140px;">
+                    <div class="selector">
+                        <div class="selectfield " id="selectfield">
+                            <a>OLSNepal <img src="images/arrow.png" width="12px" alt=""
+                                    style="margin-bottom: 0px; transition: transform 0.5s;" id="arrowicon"></a>
+                        </div>
+                        <div id="list" class="hide">
+                            <div class="options">
+                                <p><i class="fas fa-user-circle text-primary"></i>&nbsp;My Profile</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="fab fa-product-hunt text-warning"></i> My Order</p>
+                            </div>
+                            <div class="options">
+                                <p>Sell on OLSNepal</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="far fa-hand-pointer text-info"></i>&nbsp;Get Services</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="far fa-heart text-danger"></i>&nbsp;Wishlists</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="fas fa-bell text-success"></i>&nbsp;Notification</p>
+                            </div>
+                            <div class="options">
+                                <p><i class="fas fa-sign-out-alt text-dark"></i>&nbsp;Logout</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 d-none d-lg-block mt-2 p-1 navsection">
+                    <a href=""><i class="fas fa-heart text-danger"></i></a>
+                    <a href="#"><i class="fas fa-cart-plus text-warning"></i> Cart</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="categorie d-none d-md-block">
+        <div class="container">
+            <div class="row pt-2">
+                <div>
+                    <p>
+                        <a class="" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            ALL CATEGORIES <i class="fas fa-arrow-down"></i>
+                        </a>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <span>Services</span><br>
+                                    <a href="">Electronics & Computer</a><br>
+                                    <a href="">Education & Classes</a><br>
+                                    <a href="">Drivers & Taxi</a><br>
+                                    <a href="">Health & Beauty</a><br>
+                                    <a href="">Other Services</a><br>
+                                </div>
+                                <div class="col-3">
+                                    <span>Mobiles</span><br>
+                                    <a href="">Mobile Phones</a><br>
+                                    <a href="">Accessories</a><br>
+                                    <a href="">Tablets</a><br>
+                                </div>
+                                <div class="col-3">
+                                    <span>Properties(For Rent and sale)</span><br>
+                                    <a href="">Houses & Apartments</a><br>
+                                    <a href="">Houses & Apartments</a><br>
+                                    <a href="">Lands & Plots</a><br>
+                                    <a href="">Shops & Offices</a><br>
+                                    <a href="">Shops & Offices</a><br>
+                                    <a href="">PG & Guest Houses</a><br>
+                                </div>
+                                <div class="col-3">
+                                    <span>Fashion</span><br>
+                                    <a href="">Men</a><br>
+                                    <a href="">Women</a><br>
+                                    <a href="">Kids</a><br>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-3">
+                                    <span>Bikes</span><br>
+                                    <a href="">Motorcycles</a><br>
+                                    <a href="">Scooters</a><br>
+                                    <a href="">Spare Parts</a><br>
+                                    <a href="">Bicycles</a><br>
+                                </div>
+                                <div class="col-3">
+                                    <span>Electronics & Appliances</span><br>
+                                    <a href="">TVs, Video - Audio</a><br>
+                                    <a href="">Kitchen & Other Appliances</a><br>
+                                    <a href="">Computers & Laptops</a><br>
+                                    <a href="">Cameras & Lenses</a><br>
+                                    <a href="">Games & Entertainment
+                                    </a><br>
+                                    <a href="">Fridges</a><br>
+                                    <a href="">Computer Accessories</a><br>
+                                    <a href="">Hard Disks, Printers & Monitors</a><br>
+                                    <a href="">ACs</a><br>
+                                    <a href="">Washing Machines</a><br>
+                                </div>
+                                <div class="col-3">
+                                    <span>Furniture</span><br>
+                                    <a href="">Sofa & Dining</a><br>
+                                    <a href="">Beds & Wardrobes</a><br>
+                                    <a href="">Home Decor & Garden</a><br>
+                                    <a href="">Kids Furniture</a><br>
+                                    <a href="">Other Household Items</a><br>
+                                </div>
+                                <div class="col-3">
+                                    <span>Books, Sports & Hobbies</span><br>
+                                    <a href="">Books</a><br>
+                                    <a href="">Gym & Fitness</a><br>
+                                    <a href="">Musical Instruments</a><br>
+                                    <a href="">Sports Equipment</a><br>
+                                    <a href="">Other Hobbies</a><br>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-3">
+                                    <span>Cars</span><br>
+                                    <a href="">Cars</a>
+                                </div>
+                                <div class="col-3">
+                                    <span>Pets</span><br>
+                                    <a href="">Fishes & Aquarium</a><br>
+                                    <a href="">Pet Food & Accessories</a><br>
+                                    <a href="">Dogs</a><br>
+                                    <a href="">Other Pets</a><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container" style="font-family: 'Poppins'" id="cart">
+        <div class="row d-lg-flex">
+            <div class="col-12 mt-2 d-lg-none d-block">
+                <span data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="float: right;margin-right: 10px;font-weight: 600;"><i class="fas fa-filter "></i>&nbsp;Filters</span>
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLabel">filters</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12" style="color: black;">
+                                <span class="" style="font-weight: 400; font-size: 14px;">ORDER STATUS</span>
+                            </div>
+                            <form action="" method="GET">
+                                
+                                <div class="form-check mt-2">
+                                    <input type="checkbox" class="form-check-input" id="Check1">
+                                    <label class="form-check-label" for="Check1">On the Way</label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input type="checkbox" class="form-check-input" id="Check2">
+                                    <label class="form-check-label" for="Check2">Delivered</label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input type="checkbox" class="form-check-input" id="Check3">
+                                    <label class="form-check-label" for="Check3">Cancelled</label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input type="checkbox" class="form-check-input" id="Check4">
+                                    <label class="form-check-label" for="Check4">Returned</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Apply</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-2 col-12 d-lg-block d-none" id="filterside" style="margin-top: 0px;">
+                <div class="row p-2 mt-md-3">
+                    <div class="" style="background-color: #f4f4f4;height: 300px;">
+                        <div class="col-12" style="color: black;height: 34px;border-bottom: 1px solid lightgray">
+                            <h6 class="my-3" style="font-weight:600;">Filters</h6>
+                        </div>
+                        <div class="col-12" style="color: black;">
+                            <span class="my-3" style="font-weight: 400; font-size: 14px;">ORDER STATUS</span>
+                        </div>
+                        <div class="col-12 mt-2" style="color: black;">
+                            <form action="" method="GET">
+                                <div class="form-check mt-2">
+                                    <input type="checkbox" class="form-check-input" id="Check1">
+                                    <label class="form-check-label" for="Check1">On the Way</label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input type="checkbox" class="form-check-input" id="Check2">
+                                    <label class="form-check-label" for="Check2">Delivered</label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input type="checkbox" class="form-check-input" id="Check3">
+                                    <label class="form-check-label" for="Check3">Cancelled</label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input type="checkbox" class="form-check-input" id="Check4">
+                                    <label class="form-check-label" for="Check4">Returned</label>
+                                </div>
+                                <div class="mt-2">
+                                    <button class="btn-outline-success"
+                                        style="float: right;margin-right: 10px;border-radius: 20px;">Apply</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10 col-12 p-2 p-md-4" id="left">
+                <div class="row" style="background-color: #f4f4f4;">
+                    <div class="col-12" style="color: black;height: 50px;border-bottom: 1px solid lightgray">
+                        <h6 class="my-3" style="font-weight:600;"><i class="fab fa-product-hunt text-warning"></i> My Order(2)</h6>
+                    </div>
+                    <div class="col-12 cart-list border-bottom">
+                        <div class="row d-flex my-4">
+                            <div class="col-2">
+                                <div class="img-thumb" style="width: 80px;height: 80px;">
+                                    <a href=""><img src="images/2-1.jpg" alt=""
+                                            style="width: 100%;height: 100%;object-fit: contain;"></a>
+                                </div>
+                            </div>
+                            <div class="col-8 pro-detail">
+                                <div class="d-lg-flex">
+                                    <div class="col-10 title">
+                                        <a href="#">Santa fe jacket for men</a>
+                                    </div>
+                                    <div class="col-2 price">
+                                        <span>Rs.750</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 ">
+                                    <span style="font-size: 13px;">Status: <b class="text-success">Shipped</b> </span>
+                                </div>
+                                <div class="col-10 delivery">
+                                    <span style="font-size: 13px;"><i class="fas fa-truck"></i>&nbsp;Delivery
+                                        expected by Aug 08.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 cart-list border-bottom">
+                        <div class="row d-flex my-4">
+                            <div class="col-2">
+                                <div class="img-thumb" style="width: 80px;height: 80px;">
+                                    <a href=""><img src="images/2-1.jpg" alt=""
+                                            style="width: 100%;height: 100%;object-fit: contain;"></a>
+                                </div>
+                            </div>
+                            <div class="col-8 pro-detail">
+                                <div class="d-lg-flex">
+                                    <div class="col-10 title">
+                                        <a href="#">Santa fe jacket for men</a>
+                                    </div>
+                                    <div class="col-2 price">
+                                        <span>Rs.750</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 ">
+                                    <span style="font-size: 13px;">Status: <b class="text-success">Delivering tommorow.</b> </span>
+                                </div>
+                                <div class="col-10 delivery">
+                                    <span style="font-size: 13px;"><i class="fas fa-truck"></i>&nbsp;Delivery
+                                        expected by Aug 08.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 cart-list border-bottom">
+                        <div class="row d-flex my-4">
+                            <div class="col-2">
+                                <div class="img-thumb" style="width: 80px;height: 80px;">
+                                    <a href=""><img src="images/2-1.jpg" alt=""
+                                            style="width: 100%;height: 100%;object-fit: contain;"></a>
+                                </div>
+                            </div>
+                            <div class="col-8 pro-detail">
+                                <div class="d-lg-flex">
+                                    <div class="col-10 title">
+                                        <a href="#">Santa fe jacket for men</a>
+                                    </div>
+                                    <div class="col-2 price">
+                                        <span>Rs.750</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 ">
+                                    <span style="font-size: 13px;">Status: <b class="text-success">On the way</b> </span>
+                                </div>
+                                <div class="col-10 delivery">
+                                    <span style="font-size: 13px;"><i class="fas fa-truck"></i>&nbsp;Delivery
+                                        expected by Aug 08.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--footer starts from here-->
+    <footer class="footer bg-light">
+        <div class="container bottom_border">
+            <div class="row">
+                <div class=" col-sm-4 col-md col-sm-4  col-12 col text-secondary">
+                    <h5 class="headin5_amrc col_white_amrc pt2"><img width=85px src="images/logo.jpeg"></h5>
+                    <!--headin5_amrc-->
+                    <p class="mb10 text-secondary">Buy,Sell,Keep Anything on Rent and Provide Paid Services to nearby
+                        Customer.</p>
+                    <p class="text-secondary"><i class="fa fa-location-arrow"></i>Narayanghat, Nepal </p>
+                    <p class="text-secondary"><i class="fa fa-phone"></i> +9779811170683 </p>
+                    <p class="text-secondary"><i class="fa fa fa-envelope"></i> help.olsnepal@gmail.com </p>
+
+
+                </div>
+
+
+                <div class=" col-sm-4 col-md  col-6 col text-secondary">
+                    <h5 class="headin5_amrc col_white_amrc pt2 text-info font-weight-bolder">POPULAR LOCATIONS</h5>
+                    <!--headin5_amrc-->
+                    <ul class="footer_ul_amrc">
+                        <li><a href="">Narayanghat</a></li>
+                    </ul>
+                    <!--footer_ul_amrc ends here-->
+                </div>
+
+
+
+
+
+                <div class=" col-sm-4 col-md  col-12 col text-secondary">
+                    <h5 class="headin5_amrc col_white_amrc pt2 text-info font-weight-bolder">OLSNepal</h5>
+                    <!--headin5_amrc-->
+                    <ul class="footer_ul_amrc">
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="about.html#team">OLSNepal People</a></li>
+                        <li><a href="">Help</a></li>
+                        <li><a href="">Legal & Privacy information</a></li>
+                        <li><a href="disallow item.html">Items/Services not allowed on OLSNepal</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <ul class="foote_bottom_ul_amrc">
+                <li><a href="http://webenlance.com">Blog</a></li>
+                <li><a href="http://webenlance.com">About</a></li>
+                <li><a href="http://webenlance.com">Contact</a></li>
+                <li><a href="http://webenlance.com">Events</a></li>
+            </ul>
+            <!--foote_bottom_ul_amrc ends here-->
+            <p class="text-center">Copyright @2017 | Designed With by <a href="#">Manishankar</a></p>
+
+            <ul class="social_footer_ul">
+                <li><a href="http://webenlance.com"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="http://webenlance.com"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="http://webenlance.com"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="http://webenlance.com"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <!--social_footer_ul ends here-->
+        </div>
+
+
+    </footer>
+    <script>
+        var SelectField = document.getElementById("selectfield");
+        var SelectText = document.getElementById("selecttext");
+        var options = document.getElementsByClassName("options");
+        var list = document.getElementById("list");
+        var arrowIcon = document.getElementById("arrowicon");
+        var option;
+        SelectField.onclick = function () {
+            list.classList.toggle('hide');
+            arrowIcon.classList.toggle('rotate');
+        }
+        for (option of options) {
+            option.onclick = function () {
+                SelectText.innerHTML = this.textContent;
+                list.classList.toggle('hide');
+                arrowIcon.classList.toggle('rotate');
+            }
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.menu-toggle').click(function () {
+                $('nav').toggleClass('active')
+            })
+
+        })
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

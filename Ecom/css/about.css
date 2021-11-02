@@ -1,0 +1,270 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.team img{
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 10px 8px #888888;
+}
+.team h2{
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #333;
+    padding-bottom: 10px;
+}
+.team h2:after{
+    content: '';
+    background: #333;
+    display: block;
+    height: 3px;
+    width: 150px;
+    margin: 10px auto;
+}
+.team p{
+    font-weight: lighter;
+    color: gray;
+}
+.team small{
+    font-weight: bold;
+    color: gray;
+}
+.team .fa-facebook{
+    color: blue;
+    font-size: 31px;
+}
+.team .fa-instagram-square{
+    color: red;
+    font-size: 31px;
+}
+.team .fa-linkedin{
+    color: rgb(90, 90, 194);
+    font-size: 31px;
+}
+/*About us*/
+
+#main{
+    /*background-color: #f9f9f9;*/
+    /*background: url("../images/t.jpg")no-repeat;*/
+    background-size: cover;
+    width: 100%;
+    height: 55vh;
+    
+}
+#main small{
+    font-size: 4.4rem;
+    font-weight: 300;
+}
+#main h3{
+    font-size: 4.4rem;
+    font-weight: 700;
+}
+#main .btn1{
+    height: 55px;
+    width: 138px;
+    background-color: rgb(223,20,109);
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+#main .btn1:hover{
+    background-color: rgb(202,18,95);
+    transition: 0.5s;
+}
+#main .btn2{
+    height: 55px;
+    width: 138px;
+    background-color: transparent;
+    color: rgb(223,20,109);
+    outline: none;
+    border: 1px solid rgb(223,20,109);
+    font-weight: bold;
+    border-radius: 5px;
+}
+#main .btn2:hover{
+    background-color: rgb(223,20,109);;
+    transition: 0.5s;
+    color: white;
+}
+
+#objective h1::after {
+    content: '';
+    background: #333;
+    display: block;
+    height: 3px;
+    width: 150px;
+    margin: 10px auto;
+}
+
+#ceo h1::after {
+    content: '';
+    background: #333;
+    display: block;
+    height: 3px;
+    width: 150px;
+    margin: 10px auto;
+}
+/*Ceo*/
+#ceo .fa-facebook {
+    color: blue;
+    font-size: 31px;
+}
+
+#ceo .fa-instagram-square {
+    color: red;
+    font-size: 31px;
+}
+
+#ceo .fa-linkedin {
+    color: rgb(90, 90, 194);
+    font-size: 31px;
+}
+
+#ceo .fa-facebook:hover {
+    color: darkblue;
+}
+
+#ceo .fa-instagram-square:hover {
+    color: brown;
+}
+
+#ceo .fa-linkedin:hover {
+    color: darkblue;
+}
+@media screen and (max-width: 1024px) {
+    #main{
+        
+       /* background: url("../images/t.jpg")no-repeat;*/
+        background-size: cover;
+        width: 100%;
+        height: 30vh;
+    }
+    #main .mainleftstyle{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    #main{
+        background-color: rgb(230 252 235);
+       /* background: url("../images/t.jpg")no-repeat;*/
+        background-size: cover;
+        width: 100%;
+        height: 26vh;
+    }
+    #main .mainleftstyle{
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    #main small{
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    #main h3{
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    #main .btn1{
+        height: 25px;
+        width: 70px;
+        background-color: rgb(223,20,109);
+        color: white;
+        outline: none;
+        border: none;
+        font-weight: bold;
+        border-radius: 5px;
+        font-size: 10px;
+    }
+    #main .btn1:hover{
+        background-color: rgb(202,18,95);
+        transition: 0.5s;
+    }
+    #main .btn2{
+        height: 25px;
+        width: 70px;
+        background-color: transparent;
+        color: rgb(223,20,109);
+        outline: none;
+        border: 1px solid rgb(223,20,109);
+        font-weight: bold;
+        border-radius: 5px;
+        font-size: 10px;
+    }
+    #main .btn2:hover{
+        background-color: rgb(223,20,109);;
+        transition: 0.5s;
+        color: white;
+    }
+    #main .btnstyle{
+        margin-top: -45px;
+    }
+    #objective span,#objective p,#objective ul,#ceo span,#ceo p,#ceo ul{
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #main{
+        background-color: rgb(230 252 235);
+       /* background: url("../images/t.jpg")no-repeat;*/
+        background-size: cover;
+        width: 100%;
+        height: 25vh;
+    }
+    #main .mainleftstyle{
+        text-align: center;
+     
+    }
+    #main small{
+        font-size: 17px;
+        font-weight: 300;
+    }
+    #main h3{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    #main .btn1{
+        height: 25px;
+        width: 64px;
+        background-color: rgb(223,20,109);
+        color: white;
+        outline: none;
+        border: none;
+        font-weight: bold;
+        border-radius: 5px;
+        font-size: 9px;
+    }
+    #main .btn1:hover{
+        background-color: rgb(202,18,95);
+        transition: 0.5s;
+    }
+    #main .btn2{
+        height: 25px;
+        width: 64px;
+        background-color: transparent;
+        color: rgb(223,20,109);
+        outline: none;
+        border: 1px solid rgb(223,20,109);
+        font-weight: bold;
+        border-radius: 5px;
+        font-size: 9px;
+    }
+    #main .btn2:hover{
+        background-color: rgb(223,20,109);;
+        transition: 0.5s;
+        color: white;
+    }
+    #main .btnstyle{
+        margin-top: -49px;
+    }
+    
+}
+
+/*Why choose us section*/
+
+
